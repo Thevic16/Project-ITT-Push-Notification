@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'edu.pucmm.eict.Main'
+
+group 'edu.pucmm.eict'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    //Logger
+    implementation 'org.slf4j:slf4j-simple:1.7.28'
+
+    implementation group: 'io.javalin', name: 'javalin', version: '3.13.10'
+
+    implementation "org.thymeleaf:thymeleaf:3.0.11.RELEASE"
+
+    //Pusher Beams Java Server SDK
+    implementation 'com.pusher:push-notifications-server-java:1.1.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
